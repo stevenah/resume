@@ -15,15 +15,9 @@
 %% Only needed if you want a Publication List
 \addbibresource{own-bib.bib}
 
-%% Specify your last name(s) and first name(s) (as given in the .bib) to automatically bold your own name in the publications list. 
-%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
-% \mynames{Steven\bibnamedelima Hicks}
-
-%% You can specify multiple names like this, especially if you have changed your name or if you need to highlight multiple authors. See items 6–9 in the example "Journal Articles" output.
 \mynames{Steven\bibnamedelima Hicks,
   Steven\bibnamedelima Alexander\bibnamedelima Hicks,
   Steven\bibnamedelima A\bibnamedelima Hicks}
-%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
 
 % Change the fonts if you want
 \ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
@@ -53,8 +47,8 @@
 % \prefixmarker{$\diamond$}
 
 %% Photo is only shown if "fullonly" is included
-\includecomment{fullonly}
-% \excludecomment{fullonly}
+% \includecomment{fullonly}
+\excludecomment{fullonly}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,8 +69,8 @@
 
 \rightheader{~}
 \begin{fullonly}
-% \photo[r]{photo}
-% \photoscale{0.1}
+\photo[r]{photo}
+\photoscale{0.075}
 \end{fullonly}
 
 \title{Curriculum Vitae}
@@ -84,42 +78,20 @@
 \begin{document}
 \makeheaders[c]
 
-% \newcommand{\language}{norwegian}
+\newcommand{\cvlanguage}{english}
 
-% % \makerubric{english/bio}
-% \makerubric{english/skills}
-% % \makerubric{english/skills-short}
-% \makerubric{english/employment-short}
-% \makerubric{english/project-short}
-% \makerubric{english/activities-short}
-% % \makerubric{english/research}
-% \makerubric{english/education-short}
-% % \makerubric{english/misc}
-% % \makerubric{english/referee}
+\makerubric{\cvlanguage/bio}
+\makerubric{\cvlanguage/skills}
+\makerubric{\cvlanguage/employment}
+\makerubric{\cvlanguage/project}
+\makerubric{\cvlanguage/activities}
+\makerubric{\cvlanguage/teaching}
+\makerubric{\cvlanguage/education}
+\makerubric{\cvlanguage/misc}
 
-
-\makerubric{english/long/bio}
-\makerubric{english/long/skills}
-\makerubric{english/long/employment}
-\makerubric{english/long/project}
-\makerubric{english/long/activities}
-\makerubric{english/long/teaching}
-\makerubric{english/long/education}
-\makerubric{english/long/misc}
-
-% \makerubric{norwegian/long/bio}
-% \makerubric{norwegian/long/skills}
-% \makerubric{norwegian/long/employment}
-% \makerubric{norwegian/long/project}
-% \makerubric{norwegian/long/activities}
-% \makerubric{norwegian/long/teaching}
-% \makerubric{norwegian/long/education}
-% \makerubric{norwegian/long/misc}
-
-% \makerubric{english/long/supervision}
-% \input{english/long/publications}
-
-% \makerubric{english/referee}
-% \input{english/referee-full}
+\begin{fullonly}
+\makerubric{\cvlanguage/supervision}
+\input{\cvlanguage/publications}
+\end{fullonly}
 
 \end{document}
