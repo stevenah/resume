@@ -1,4 +1,4 @@
-\documentclass[a4paper,skipsamekey,10pt,english]{curve}
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
 
 % Default biblatex style used for the publication list is APA6. If you wish to use a different style or pass other options to biblatex you can change them here. 
 \PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
@@ -15,8 +15,9 @@
 %% Only needed if you want a Publication List
 \addbibresource{own-bib.bib}
 
-\mynames{Steven\bibnamedelima Hicks}
-
+\mynames{Steven\bibnamedelima Hicks,
+  Steven\bibnamedelima Alexander\bibnamedelima Hicks,
+  Steven\bibnamedelima A\bibnamedelima Hicks}
 
 % Change the fonts if you want
 \ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
@@ -46,17 +47,17 @@
 % \prefixmarker{$\diamond$}
 
 %% Photo is only shown if "fullonly" is included
-\includecomment{fullonly}
-% \excludecomment{fullonly}
+% \includecomment{fullonly}
+\excludecomment{fullonly}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \leftheader{%
-  {\LARGE\bfseries\sffamily Steven Hicks, Ph.D. (born 07-12-1993)}
+  {\LARGE\bfseries\sffamily Steven Hicks, Ph.D.}
   
-  \makefield{\faEnvelope[regular]}{\href{mailto:steven@simula.no}{\texttt{steven@simula.no}}}
+  \makefield{\faEnvelope[regular]}{\href{mailto:steven@simula.no}{\texttt{steven@kefka.xyz}}}
   \makefield{\faPhone}{+47 950 88 557}
   % \makefield{\faPhone}{+1 503 851 9289}
   \makefield{\faGlobe}{\url{https://stevenhicks.xyz}}
@@ -68,8 +69,8 @@
 
 \rightheader{~}
 % \begin{fullonly}
-\photo[r]{photo}
-\photoscale{0.095}
+% \photo[r]{photo}
+% \photoscale{0.095}
 % \end{fullonly}
 
 \title{Curriculum Vitae}
@@ -79,14 +80,14 @@
 
 \newcommand{\cvlanguage}{english}
 
-\makerubric{\cvlanguage/bio}
-\makerubric{\cvlanguage/skills}
+% \makerubric{\cvlanguage/bio}
+% \makerubric{\cvlanguage/skills}
 \makerubric{\cvlanguage/employment}
-\makerubric{\cvlanguage/project}
-\makerubric{\cvlanguage/activities}
-\makerubric{\cvlanguage/teaching}
+% \makerubric{\cvlanguage/project}
+% \makerubric{\cvlanguage/teaching}
 \makerubric{\cvlanguage/education}
-\makerubric{\cvlanguage/misc}
+\makerubric{\cvlanguage/activities}
+% \makerubric{\cvlanguage/misc}
 
 \begin{fullonly}
     \makerubric{\cvlanguage/supervision}
